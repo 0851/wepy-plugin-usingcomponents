@@ -11,7 +11,7 @@ npm install wepy-plugin-usingcomponents --save-dev
 
 ## 配置`wepy.config.js`
 
-```
+```js
 const path = require("path");
 module.exports.plugins = {
     'usingcomponents': {
