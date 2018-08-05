@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "mkdir -p lib && babel index.js --watch --out-file lib/index.js",
-    "build": "mkdir -p lib && babel index.js --out-file lib/index.js",
+    "build": "mkdir -p lib && babel index.js --out-file lib/index.js && git add . && git commit --allow-empty -am 'build..'",
     "release": "npm run release-patch",
     "prelease": "npm run build && npm version prerelease && git push --tags --force && git push && npm publish",
     "release-patch": "npm run build && npm version patch && git push --tags && git push && npm publish",
