@@ -1,6 +1,6 @@
 {
   "name": "wepy-plugin-usingcomponents",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "wepy-plugin-usingcomponents auto require wx min app usingcomponents",
   "main": "lib/index.js",
   "scripts": {
