@@ -1,0 +1,41 @@
+{
+  "name": "wepy-plugin-usingcomponents",
+  "version": "1.0.3",
+  "description": "wepy-plugin-usingcomponents auto require wx min app usingcomponents",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "mkdir -p lib && babel index.js --watch --out-file lib/index.js",
+    "build": "mkdir -p lib && babel index.js --out-file lib/index.js && git add . && git commit --allow-empty -am 'build..'",
+    "release": "npm run release-patch",
+    "prelease": "npm run build && npm version prerelease && git push --tags --force && git push && npm publish",
+    "release-patch": "npm run build && npm version patch && git push --tags && git push && npm publish",
+    "release-minor": "npm run build && npm version minor && git push --tags && git push && npm publish",
+    "release-major": "npm run build && npm version major && git push --tags && git push && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0851/wepy-plugin-usingcomponents.git"
+  },
+  "keywords": [
+    "wepy",
+    "usingcomponents"
+  ],
+  "author": "wangjianliang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0851/wepy-plugin-usingcomponents/issues"
+  },
+  "homepage": "https://github.com/0851/wepy-plugin-usingcomponents#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "copy-dir": "^0.4.0",
+    "lodash": "^4.17.11",
+    "mkdirp": "^0.5.1"
+  }
+}
